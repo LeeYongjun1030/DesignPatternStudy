@@ -1,5 +1,6 @@
 # DesignPatternStudy
-It's for design pattern study
+It's for design pattern study.  
+I aim to study easily and joyfully.  
 
 # Contents  
 
