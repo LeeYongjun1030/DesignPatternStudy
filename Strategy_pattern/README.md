@@ -18,3 +18,110 @@
 전략 패턴은 다음과 같은 구조를 가진다.
 
 ![strategyPatternStructure](https://user-images.githubusercontent.com/78812317/142611871-e7141037-f618-488c-b2e7-29353de75749.PNG)
+
+## Source Code
+  
+전략 인터페이스를 생성한다.  
+``` Java
+package strategy_pattern;
+
+public interface MoveStrategy {
+	public void move();
+}
+```  
+
+  
+전략을 구현하는 클래스들을 만들어준다.  
+``` Java
+package strategy_pattern;
+
+public class Walk implements MoveStrategy {
+
+	public void move() {
+		System.out.println("걸어서 학교에 갑니다.");
+	}
+
+}
+
+```
+
+
+``` Java
+package strategy_pattern;
+
+public class Bus implements MoveStrategy {
+
+	public void move() {
+		System.out.println("버스를 타고 학교에 갑니다.");
+	}
+
+}
+
+```
+
+``` Java
+package strategy_pattern;
+
+public class Car implements MoveStrategy {
+
+	public void move() {
+		System.out.println("차를 타고 학교에 갑니다.");
+	}
+
+}
+
+```
+  
+전략을 사용할 객체를 만들어준다.  
+``` Java
+package strategy_pattern;
+
+public class Person {
+	MoveStrategy ms;
+	
+	public Person(MoveStrategy ms){
+		this.ms = ms;
+	}
+
+	public void setMs(MoveStrategy ms) {
+		this.ms = ms;
+	}
+	
+	public void performMove() {
+		ms.move();
+	}
+
+}
+
+```
+  
+테스트는 다음과 같이 실행할 수 있다.  
+``` Java
+package strategy_pattern;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Person kim = new Person(new Walk());
+		kim.performMove();
+		
+		Person lee = new Person(new Bus());
+		lee.performMove();
+		
+		//lee가 차를 구입 -> 전략을 수정
+		lee.setMs(new Car());
+		lee.performMove();
+		
+		
+	}
+
+}
+```
+
+출력 결과는 다음과 같다. 
+```
+걸어서 학교에 갑니다.
+버스를 타고 학교에 갑니다.
+차를 타고 학교에 갑니다.
+```
