@@ -1,0 +1,4 @@
+# Factory Pattern
+## Introduction
+
+## Structure
