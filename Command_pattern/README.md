@@ -53,7 +53,16 @@ public class Television {
 	public void off() {
 		System.out.println("tv off.");
 	}
+	
+	public void volumeUp() {
+		System.out.println("tv volume up.");
+	}
+	
+	public void volumeDown() {
+		System.out.println("tv volume down.");
+	}
 }
+
 
 ```
    
@@ -122,6 +131,31 @@ public class TelevisionOnCommand implements Command {
 
 ```
 
+```Java
+package command_pattern;
+
+public class TelevisionVolumeCommand implements Command {
+
+	Television tv;
+	
+	public TelevisionVolumeCommand(Television tv) {
+		this.tv = tv;
+	}
+	
+	@Override
+	public void excute() {
+		tv.volumeUp();
+	}
+
+	@Override
+	public void undo() {
+		tv.volumeDown();
+	}
+
+}
+
+```
+
 Invoke 역할의 리모컨을 만들어줍니다. 이 리모컨이 다양한 커맨드를 객체로 받아서 리시버로 하여금 명령을 지시합니다.  
 
 ```Java
@@ -167,8 +201,13 @@ public class PatternTest {
 		remote.onButtonPushed();
 		remote.offButtonPushed();
 		
+		Command televisionVolumeCommand = new TelevisionVolumeCommand(new Television());
+		remote.setCommand(televisionVolumeCommand);
+		remote.onButtonPushed();
+		remote.offButtonPushed();
 	}
 }
+
 
 ```
 
@@ -178,6 +217,8 @@ light on.
 light off.
 tv on.
 tv off.
+tv volume up.
+tv volume down.
 ```
 
 
