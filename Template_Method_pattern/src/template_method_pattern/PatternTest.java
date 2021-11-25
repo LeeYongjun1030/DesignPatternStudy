@@ -11,6 +11,11 @@ public class PatternTest {
 		System.out.println("\n== Day 2 ==");
 		SoccerClass tomorrow = new PassClass();
 		tomorrow.routine();
+		
+		
+		System.out.println("\n== Day 3 ==");
+		SoccerClass special = new SpecialClass();
+		special.routine();
 	}
 
 }
