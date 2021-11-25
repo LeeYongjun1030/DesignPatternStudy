@@ -14,3 +14,4 @@
 *  [Command Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Command_pattern#readme)  
 *  [Adapter Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Adapter_pattern#readme)  
 *  [Facade Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Facade_pattern#readme)  
+*  [Template Method Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Template_Method_pattern#readme)  
