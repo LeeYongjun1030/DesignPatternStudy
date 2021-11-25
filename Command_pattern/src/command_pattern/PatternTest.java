@@ -15,5 +15,9 @@ public class PatternTest {
 		remote.onButtonPushed();
 		remote.offButtonPushed();
 		
+		Command televisionVolumeCommand = new TelevisionVolumeCommand(new Television());
+		remote.setCommand(televisionVolumeCommand);
+		remote.onButtonPushed();
+		remote.offButtonPushed();
 	}
 }

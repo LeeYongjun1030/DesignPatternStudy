@@ -9,4 +9,12 @@ public class Television {
 	public void off() {
 		System.out.println("tv off.");
 	}
+	
+	public void volumeUp() {
+		System.out.println("tv volume up.");
+	}
+	
+	public void volumeDown() {
+		System.out.println("tv volume down.");
+	}
 }
