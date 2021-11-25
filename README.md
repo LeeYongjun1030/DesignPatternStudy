@@ -1,6 +1,7 @@
 # DesignPatternStudy
 It's for design pattern study.  
 I aim to study easily and joyfully.  
+I tried to set an interesting situation for each pattern.   
 
 # Contents  
 
