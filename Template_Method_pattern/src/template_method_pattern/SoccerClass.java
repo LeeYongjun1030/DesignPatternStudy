@@ -1,12 +1,11 @@
 package template_method_pattern;
 
 public abstract class SoccerClass {
+	
 	public void routine() {
 		warmUp();
 		practice();
 		finish();
-		
-		
 	}
 	
 	public void warmUp() {
