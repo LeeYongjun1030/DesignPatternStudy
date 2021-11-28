@@ -163,4 +163,33 @@ public class PatternTest {
 구조도 동일한데, 스테이트 패턴은 전략 패턴과 무엇이 다른가요?  
 (전략 패턴 보러가기: [여기](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Strategy_pattern#readme))  
    
-   전략
+   구조는 동일하지만 용도에서 미묘한 차이가 있습니다.  
+      
+   아래는 전략 패턴의 클라이언트 부분을 가져온 것입니다. 
+   전략 패턴에서는 클라이언트가 직접 전략 수정을 위해서 새 전략을 심어주어야 했습니다. 즉 전략 패턴은 실행 시에 클라이언트에게 전략을 변경할 수 있는 유연성을 제공하기 위한 용도로 사용됩니다.
+   
+```Java
+package strategy_pattern;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Person kim = new Person(new Walk());
+		kim.performMove();
+		
+		Person lee = new Person(new Bus());
+		lee.performMove();
+		
+		//lee가 차를 구입 -> 전략을 수정
+		lee.setMs(new Car());
+		lee.performMove();		
+	}
+}
+
+```
+   반면, 스테이트 패턴의 클라이언트 부분 코드를 보면, 스테이트(상태)를 직접 변경해주지는 않습니다.
+   단지 클라이언트는 좋아요 또는 싫어요 버튼을 누르는 것뿐이고, 그 상황에 맞게 스테이트는 Idle/Like/Dislike로 알아서 적절히 변경됩니다.
+   이처럼 스테이트 패턴에서는 상황에 따라 즉 객체의 내부 상태에 따라 현재 스테이트를 나타내는 객체가 바뀌게 되고, 그 결과로 컨텍스트 객체의 행동도 자연스럽게 바뀌게 됩니다.
+   클라이언트 입장에서는 스테이트 객체에 대해서 아무것도 알 필요가 없어지게 되는 것이죠.  
+   
