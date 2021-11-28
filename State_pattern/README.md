@@ -161,6 +161,6 @@ public class PatternTest {
 ```
 ## Question
 구조도 동일한데, 스테이트 패턴은 전략 패턴과 무엇이 다른가요?  
-(전략 패턴 보러가기: [여기]())  
+(전략 패턴 보러가기: [여기](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Strategy_pattern#readme))  
    
    전략
