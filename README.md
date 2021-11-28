@@ -16,6 +16,7 @@
 *  [Facade Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Facade_pattern#readme)  
 *  [Template Method Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Template_Method_pattern#readme)  
 *  [Iterator Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Iterator_pattern#readme)
+*  [Composite Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Composite_pattern#readme)
 
 
 
