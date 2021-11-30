@@ -18,7 +18,7 @@
 *  [Iterator Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Iterator_pattern#readme)
 *  [Composite Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Composite_pattern#readme)
 *  [State Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/State_pattern#readme)
-
+*  [Proxy Pattern](https://github.com/LeeYongjun1030/DesignPatternStudy/tree/master/Proxy_pattern#readme)
 
 
 # Summary
@@ -61,6 +61,7 @@
 * **State Pattern**을 이용하면 객체의 내부 상태가 바뀜에 따라서 객체의 행동을 바꿀 수 있습니다.
 마치 객체의 클래스가 바뀌는 것과 같은 결과를 얻을 수 있습니다.
 
+* **Proxy Pattern**은 어떤 객체에 대한 접근을 제어하기 위한 용도로 대리인이나 대변인에 해당하는 객체를 제공하는 패턴입니다.  
 
 
 
